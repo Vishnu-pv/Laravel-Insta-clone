@@ -2,20 +2,23 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row ">
  
-        <div class="col-3 p-5">
+        <div class="col-3 p-5"  style="position:relative;">
             <img src="https://instagram.fcok1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/106607826_583164439253576_2363279325884512950_n.jpg?_nc_ht=instagram.fcok1-1.fna.fbcdn.net&_nc_ohc=wfvMg56BNyAAX-C9m2q&oh=b3f74798d01bf3b003f4e8ca755a25c1&oe=5F67A86B" alt="head-img" class="rounded-circle" >
         </div>
         <div class="col-9 pt-5">
              
-                 <div><h1>{{ $user -> username }}</h1></div>
+                 <div class="d-flex justify-content-between align-items-baseline">
+                 <h1>{{ $user -> username }}</h1>
+                 <a href="#">Add New Post</a>
+                 </div>
                  <div class="d-flex">
                          <div class="pr-5"><strong>153</strong> posts</div>
                          <div class="pr-5"><strong>55.5M</strong> followers</div>
                          <div class="pr-5"><strong>812</strong> following</div>
                 </div>   
-                <div class="pt-3">{{ $user->profile->title}}</div>
+                <div class="pt-3">{{ $user->profile->title}}</div> 
                 <div>{{ $user->profile->description}}</div>
                 <div ><strong><a href="#">{{ $user->profile->url }}</a></strong></div>
         </div>
